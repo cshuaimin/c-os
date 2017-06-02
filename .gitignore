@@ -1,0 +1,8 @@
+*.swp
+*.o
+*.elf
+*.bin
+img
+bootsector
+kernel
+tobootsector

@@ -1,0 +1,2 @@
+file boot.elf
+target remote :1234
