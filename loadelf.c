@@ -14,7 +14,7 @@ read_sector(uint16_t sect, uint16_t cyl, uint8_t head, uint8_t num, void *addr)
     outb(0x1F7, 0x20);                      // cmd 0x20 - read sectors
     while (BIT_FLAG(inb(0x1f7), 7)) // while busy
         __asm__("nop");   // wait
-    insl(0x1f0, addr, 128);
+    insl(0x1f0, addr, 128 * num);
 }
 
 #define elf_head ((struct elfhdr *) 0x10000)
